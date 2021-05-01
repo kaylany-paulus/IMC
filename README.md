@@ -1,6 +1,4 @@
-# Ideal_Weight
-
-IMC
+# IMC
 
 ---------------------------------------
 Calculates the user's Body Mass Index (BMI).

@@ -28,7 +28,7 @@ namespace Ideal_Weight
                 {
                     Console.Clear();
                     Console.ForegroundColor=ConsoleColor.DarkRed;
-                    Console.WriteLine($"\n\n({numericName}) É UM NOME INVÁLIDO!");
+                    Console.WriteLine($"\n\n({numericName}) É UM NOME INVÁLIDO!\n");
                     Console.ResetColor();
                     Environment.Exit(-1);
                 }
@@ -40,7 +40,7 @@ namespace Ideal_Weight
                 {
                     Console.Clear();
                     Console.ForegroundColor=ConsoleColor.DarkRed;
-                    Console.WriteLine("\n\nO VALOR DIGITADO NÃO CORRESPONDE A UM VALOR NUMÉRICO!");
+                    Console.WriteLine("\n\nO VALOR DIGITADO NÃO CORRESPONDE A UM VALOR NUMÉRICO!\n");
                     Console.ResetColor();
                     Environment.Exit(-1);
                 }
@@ -52,7 +52,7 @@ namespace Ideal_Weight
                 {
                     Console.Clear();
                     Console.ForegroundColor=ConsoleColor.DarkRed;
-                    Console.WriteLine("\n\nO VALOR DIGITADO NÃO CORRESPONDE A UM VALOR NUMÉRICO!");
+                    Console.WriteLine("\n\nO VALOR DIGITADO NÃO CORRESPONDE A UM VALOR NUMÉRICO!\n");
                     Console.ResetColor();
                     Environment.Exit(-1);
                 }
