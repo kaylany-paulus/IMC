@@ -17,7 +17,8 @@ namespace Ideal_Weight
             Console.ResetColor();
 
             Console.ForegroundColor=ConsoleColor.DarkCyan;
-            Console.WriteLine("\nIremos calcular seu índice de Massa Corporal.");
+            Console.Write("\nIremos calcular seu índice de Massa Corporal,"); 
+            Console.Write(" juntamente com o seu peso ideal.");
             Console.ResetColor();
 
             Console.Write("\nMas antes por favor me diga seu nome..: ");
@@ -40,7 +41,8 @@ namespace Ideal_Weight
                 {
                     Console.Clear();
                     Console.ForegroundColor=ConsoleColor.DarkRed;
-                    Console.WriteLine("\n\nO VALOR DIGITADO NÃO CORRESPONDE A UM VALOR NUMÉRICO!\n");
+                    Console.WriteLine(
+                        "\n\nO VALOR DIGITADO NÃO CORRESPONDE A UM VALOR NUMÉRICO!\n");
                     Console.ResetColor();
                     Environment.Exit(-1);
                 }
@@ -52,7 +54,8 @@ namespace Ideal_Weight
                 {
                     Console.Clear();
                     Console.ForegroundColor=ConsoleColor.DarkRed;
-                    Console.WriteLine("\n\nO VALOR DIGITADO NÃO CORRESPONDE A UM VALOR NUMÉRICO!\n");
+                    Console.WriteLine(
+                        "\n\nO VALOR DIGITADO NÃO CORRESPONDE A UM VALOR NUMÉRICO!\n");
                     Console.ResetColor();
                     Environment.Exit(-1);
                 }
@@ -64,74 +67,81 @@ namespace Ideal_Weight
                 if (imc < 17)
                 {
                     Console.ForegroundColor=ConsoleColor.Yellow;
-                    Console.WriteLine($"\n\nSeu IMC é= {imc:N2}");
+                    Console.WriteLine($"\n\nSeu IMC é = {imc:N2}");
                     Console.WriteLine("Diagnóstico: Muito abaixo do peso!");
                     Console.ResetColor();
                     Console.ForegroundColor=ConsoleColor.DarkYellow;
-                    Console.WriteLine("\n\nPor favor se cuida!");
+                    Console.WriteLine("\n\nPor favor cuide-se!");
                     Console.ResetColor();
                     Environment.Exit(-1);
                 }
 
-                else if (imc >=17)
+                else if(imc >= 17 && imc <= 18)
                 {
                     Console.ForegroundColor=ConsoleColor.Yellow;
-                    Console.WriteLine($"\n\nSeu IMC é= {imc:N2}");
+                    Console.WriteLine($"\n\nSeu IMC é = {imc:N2}");
                     Console.WriteLine("Diagnóstico: Abaixo do peso!");
                     Console.ResetColor();
                     Console.ForegroundColor=ConsoleColor.Yellow;
-                    Console.WriteLine("\n\nPor favor se cuida!");
+                    Console.WriteLine("\n\nPor favor cuide-se!");
                     Console.ResetColor();
                     Environment.Exit(-1);  
                 }
-                else if (imc >= 18)
-                {
-                    Console.ForegroundColor=ConsoleColor.Yellow;
-                    Console.WriteLine($"\n\nSeu IMC é= {imc:N2}");
-                    Console.WriteLine("Diagnóstico: Abaixo do peso!");
-                    Console.ResetColor();
-                    Console.ForegroundColor=ConsoleColor.Yellow;
-                    Console.WriteLine("\n\nPor favor se cuida!");
-                    Console.ResetColor();
-                    Environment.Exit(-1);  
-                }
-
-                else if (imc >=19)
+                else if(imc >= 19 && imc <= 24)
                 {
                     Console.ForegroundColor=ConsoleColor.Green;
-                    Console.WriteLine($"\n\nSeu IMC é={imc:N2}");
+                    Console.WriteLine($"\n\nSeu IMC é = {imc:N2}");
                     Console.WriteLine("Diagnóstico: Peso normal!");
                     Console.ResetColor();
                     Console.ForegroundColor=ConsoleColor.DarkGreen;
-                    Console.WriteLine("\n\nPeso normal, se mantenha assim!");
+                    Console.WriteLine("\n\nPeso normal, mantenha-se assim!");
                     Console.ResetColor();
                     Environment.Exit(-1); 
                 }
-                else if (imc >=25)
+                else if(imc >= 25 && imc <= 29)
                 {
                     Console.ForegroundColor=ConsoleColor.Yellow;
                     Console.WriteLine($"\n\nSeu IMC é= {imc:N2}");
                     Console.WriteLine("Diagnóstico: Acima do peso!");
                     Console.ForegroundColor=ConsoleColor.Yellow;
-                    Console.WriteLine("\n\n!Por favor se cuida!");
+                    Console.WriteLine("\n\n!Por favor cuide-se!");
                     Console.ResetColor();
                     Environment.Exit(-1); 
                 }
 
-                else if (imc >=30)
+                else if(imc >= 30 && imc <= 34)
                 {
                     Console.ForegroundColor=ConsoleColor.Red;
                     Console.WriteLine($"\n\nSeu IMC é= {imc:N2}");
                     Console.WriteLine("Diagnóstico: Obesidade I !");
                     Console.ResetColor();
                     Console.ForegroundColor=ConsoleColor.DarkRed;
-                    Console.WriteLine("\n\n!Por favor se cuida!");
+                    Console.WriteLine("\n\n!Por favor cuide-se!");
                     Console.ResetColor();
                     Environment.Exit(-1); 
                 }
-                
-            
-                
+                else if(imc >= 35 && imc <= 39) 
+                {
+                    Console.ForegroundColor=ConsoleColor.Red;
+                    Console.WriteLine($"\n\nSeu IMC é= {imc:N2}");
+                    Console.WriteLine("Diagnóstico: Obesidade II (SEVERA)!");
+                    Console.ResetColor();
+                    Console.ForegroundColor=ConsoleColor.DarkRed;
+                    Console.WriteLine("\n\n!Por favor cuide-se!");
+                    Console.ResetColor();
+                    Environment.Exit(-1); 
+                }
+                 else   
+                {
+                    Console.ForegroundColor=ConsoleColor.Red;
+                    Console.WriteLine($"\n\nSeu IMC é = {imc:N2} kg");
+                    Console.WriteLine("Diagnóstico: Obesidade III (Mórbida)");
+                    Console.ResetColor();
+                    Console.ForegroundColor=ConsoleColor.DarkRed;
+                    Console.WriteLine("\n\n!Por favor cuide-se!");
+                    Console.ResetColor();
+                }
+
             Console.ResetColor();
             Console.ForegroundColor=ConsoleColor.Green;
             Console.WriteLine("\n\nOBRIGADA POR ACESSAR O PROGRAMA!\n");
